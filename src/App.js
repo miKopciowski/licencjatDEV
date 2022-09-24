@@ -21,7 +21,7 @@ function App() {
   function getData() {
     axios({
       method: "GET",
-      url:"http://localhost:5000/querry",
+      url:"https://finalnybackend2.herokuapp.com/querry",
     })
     .then((response) => {
       const res =response.data
@@ -43,7 +43,7 @@ function App() {
         "querry": querry_data
       };
       console.log(searchedQuerry)
-      let res = await axios.post('http://localhost:5000/querry', searchedQuerry);
+      let res = await axios.post('https://finalnybackend2.herokuapp.com/querry', searchedQuerry);
   
       let data = res.data;
  
